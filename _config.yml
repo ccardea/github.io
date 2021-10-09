@@ -3,5 +3,4 @@ title: C. Cardea
 description: Getting back into the game
 header_pages:
   - about.md
-include:  ["_posts/*"]
-limit_posts: 5
+  
