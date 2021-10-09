@@ -3,7 +3,7 @@
 - I came back to Github because I wanted to use a project that is hosted here.
 
 ## A Little Bit About Me
-My name is **Christopher Cardea**. I'm recently retired but active and healthy. I have a lot of free time and want to keep my mind sharp. Towards that end I recently enrolled in an online course in Computer Science and Python from MIT. I'm very happy with the course so far. I think it's really top notch. This has reignited my interest in programming and  Data Science. I'm considering enrolling in MIT's Micro Masters in Data Science. I'll need to refresh my math skills, but I believe I can do it. 
+My name is **Christopher Cardea**. I'm recently retired but active and healthy. I have a lot of free time and want to keep my mind sharp. Towards that end I recently enrolled in an online course from MIT to learn Python. This is a top notch program and I'm very happy with it. It has reignited my interest in programming and Data Science. I'm planning to enroll in MIT's Micro Masters in Data Science as soon as I complete the prerequisites. 
 
 ## Background and Experience
 I started out with computers in the military, using a punched card system. I took a couple of programming courses in college, but I'm mostly self taught. I've played around quite a bit and contributed to some open source projects on Drupal, but never did anything professionally in the programing field. The languages I've worked with include:
