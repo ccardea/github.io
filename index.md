@@ -20,6 +20,6 @@ I started out with computers in the military, using a punched card system. I too
 My more recent work was on a Linux/Ubuntu system using Apache web server. I've never attempted Windows programming.
 
 ## Current Goals
-* Completing the MIT course I recently enrolled in.
+* Micro Masters in Data Science from MIT.
 * Becoming expert at Python
 * Refreshing my math skills
