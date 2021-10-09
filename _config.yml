@@ -1,3 +1,5 @@
 theme: minima
 title: C. Cardea
 description: Getting back into the game
+header_pages:
+  - about.md
