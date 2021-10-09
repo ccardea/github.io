@@ -1,4 +1,9 @@
-## Why I Love Python
+---
+layout: post
+title: "Why I Love Python"
+categories: misc
+---
+<!--## Why I Love Python-->
 
 I'm getting back into computer programming after at least ten years of doing no programming at all. Learning Python seemed like a good place to start, since it seems to be popular and good learning resources are available. It is apparently widely used in Data Science, which is a field that interests me. From the perspective of someone who has been around computers for a long time, I think Python is great! In a nutshell:
 - It's as easy to use a Basic
