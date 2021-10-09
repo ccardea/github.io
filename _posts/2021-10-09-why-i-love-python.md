@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Why I Love Python"
-categories: misc
 ---
 <!--## Why I Love Python-->
 
