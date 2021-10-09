@@ -1,6 +1,10 @@
-# C. Cardea
-- Returning user after being away for around 15 years.
-- I came back to Github because I wanted to use a project that is hosted here.
+---
+layout: page
+title: About
+permalink: /about/
+---
+## C. Cardea
+- Returning user after being away for at least a decade.
 
 ## A Little Bit About Me
 My name is **Christopher Cardea**. I'm recently retired but active and healthy. I have a lot of free time and want to keep my mind sharp. Towards that end I recently enrolled in an online course from MIT to learn Python. This is a top notch program and I'm very happy with it. It has reignited my interest in programming and Data Science. I'm planning to enroll in MIT's Micro Masters in Data Science as soon as I complete the prerequisites. 
