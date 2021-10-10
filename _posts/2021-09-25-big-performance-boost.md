@@ -2,15 +2,15 @@
 layout: post
 title: Big Performance Boost
 ---
-In my Python class, we were given a piece of example code that performed poorly.
+While I was enrolled in a class to learn Python, we were given some example code that performed poorly.
 ### Scenario
 - A word game similar to Scrabble.
 - Player is dealt a hand with seven letters.
-- Player then trys to come up with a word from the given letters.
+- Player then trys to come up with a word from the letters in the hand.
 - Valid words are contained in a list of over eighty thousand words.
 - With the computer as player, it searches through the list for valid words
 
-The given code ran slow and, even though it was not part of the assignment, I had to fix it. What follows is output that compares the performance of the given code to the modified code that I implemented.
+The example code ran slow and, even though it was not part of the assignment, I decided to try fixing it. What follows is output that compares the performance of the example code to the modified code that I implemented.
 ```
 Loading word list from file...
    83667 words loaded.
@@ -26,7 +26,7 @@ ccw1 results: word vigor score: 45 time: 0:00:55.997249
 ccw2 results: word vigor score: 45 time: 0:00:00.062486
 Modified code is 896 times faster
 ```
-I think this is hilarious!. Naturally people want to know how I did it.
+I can only laugh at this. Naturally people want to know how I did it.
 ```
 Created on Fri Sep 24 09:17:43 2021
 Attempts to make compChooseWord() run faster.
@@ -38,3 +38,4 @@ Attempts to make compChooseWord() run faster.
 6. Only scores a small list of candidate words
 7. Eliminates an unnecessary step in isWordValid
 ```
+Of course, there's a trade off. The modified code doesn't guarantee that the word it chooses will be the highest possible score. There are cases when a word with fewer letters will produce a higher score. It wouldn't be too difficult to add a step to continue searching smaller words under certain circumstances. But for now, I decided to take the trade off and move on.
