@@ -55,7 +55,7 @@ class Example():
         self._slot_0 = 'This is slot 0'
         self._slot_1 = 'This is slot 1'
 ```
-An interactive session looks like this:
+An interpreter session looks like this:
 ```
 >>> x = Example()
 >>> print(x._slot_0)
@@ -86,7 +86,7 @@ class Example():
         self._slot_0 = 'This is slot 0'
         self._slot_1 = 'This is slot 1'
 ```
-Using the same code as the previous interactive session will produce exactly the same results. But unlike a tuple, a list is mutable, and there may be cases when we want to access the list directly. For example, we can implement get and set functions that access the list directly, as shown below.
+Using the same code as the previous interpreter session will produce exactly the same results. But unlike a tuple, a list is mutable, and there may be cases when we want to use the list. For example, we can implement get and set functions that access the list, as shown below.
 ```   
     def _set(self, _slot, _value):
         self.__slots__[_slot] = _value
@@ -96,7 +96,7 @@ Using the same code as the previous interactive session will produce exactly the
         return self.__slots__[_slot]
    
 ```
-Attempting to use both dot notation and getters and setters will produce results that may be surprising. The example code below uses both previous examples.
+Attempting to use both dot notation and getters and setters will produce results that may be surprising. Using both previous examples,
 ```
 >>>  x = Example()
 >>> print(x._slot_0)
@@ -112,9 +112,9 @@ This is slot 0
 >>> print(x._get(0))
 zero
 ```
-This session shows that accessing `x._slot_0` works as it did before, but attempting to access `_slot_0` with the get function returns only the name of the variable. If we then use the set function to insert a value, we see that the value returned by `x._slot_0` hasn't changed, but the get function retrieves the value inserted with the set function. 
+This session shows that accessing `x._slot_0` works as it did before, but attempting to access `_slot_0` with the get function returns only the name of the variable. If we then use the set function to insert a value, we see that the value returned by `x._slot_0` hasn't changed, but the get function retrieves the value inserted by the set function. 
 
-Python does not allow access through the list to data that has been set through `__slots__` variables, and we cannot overwrite data set through `__slots__` variables by writing to the list directly. But we can still use the list like any other list without altering the variable names or the data they contain.  
+Python does not allow access through the list to data that has been set through `__slots__` variables, and we cannot overwrite `__slots__` variables by writing to the list directly. But we can still use the list like any other list without altering the variable names or the data they contain. This type of use was learned by experiment and does not appear in the documentation. It might be considered a bit of a hack.
 
 
 ## Default Values 
@@ -122,7 +122,7 @@ The following text appears in the Python Language Reference section 3.3.2.4.1:
 
 > `__slots__ `are implemented at the class level by creating descriptors ... for each variable name. As a result, class  attributes cannot be used to set default values for instance variables defined by `__slots__`; otherwise, the class  attribute would overwrite the descriptor assignment.
 
-That instruction was a source of confusion for this author. It is not necessary to explicitely implement descriptors in order to use slots. The point is that default values may not be set using class attributes.
+That instruction was a source of confusion for this author. It is not necessary to explicitly implement descriptors in order to use slots. The point is that default values cannot be set using class attributes.
 
 ```
 class Example():
@@ -159,13 +159,17 @@ class Example():
 >>> print(x._slot_0)
 Out: zero
 ```
+ 
 ## Why Not Use Slots?
 
 There may be cases when you might not want to use `__slots__`; for example, if you would like for your class to use dynamic atttribute creation or weak references. In those cases, you can add `'__dict__'` or `'__weakref__'` as the last element in the `__slots__` declaration.
 
-Certain Python objects may depend on the `__dict__` attribute. Descriptor classes depend on the `__dict__` attribute being present in the owner class.  The functools.cached_property() also requires an instance dictionary to function correctly. Programmers may want to avoid `__slots__` in any case where another Python object requires `__dict__` or `__weak_ref__`to be present.
+Certain Python objects may depend on the `__dict__` attribute. For example, descriptor classes depend on the `__dict__` attribute being present in the owner class. Programmers may want to avoid `__slots__` in any case where another Python object requires `__dict__` or `__weak_ref__`to be present.  According to the Descriptor How To for Python 3.9, the functools.cached_property() is another example that requires an instance dictionary to function correctly. 
 
 ## Beyond The Basics
 There are a few things to be aware of when going beyond the basics.  Slots variables declared in parents are available in child classes. However, child subclasses will get a `__dict__` and `__weakref__` unless they also define `__slots__`, which should only contain names of additional slots. Multiple inheritance with multiple slotted parent classes can be used, but only one parent is allowed to have attributes created by slots. The other bases must have empty slot layouts. For additional details, please see the Python Language Reference, section 3.3.2.4.1.
+
+## Conclusion
+Slots are a simple, easy to use, efficient, and safe alternative to Python's default method of data access. The only known exception is when another object requires access to the `__dict__` attribute.  
 
 
