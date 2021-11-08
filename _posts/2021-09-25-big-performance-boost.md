@@ -6,11 +6,10 @@ While I was enrolled in a class to learn Python, we were given some example code
 ### Scenario
 - A word game similar to Scrabble.
 - Player is dealt a hand with seven letters.
-- Player then trys to come up with a word from the letters in the hand.
 - Valid words are contained in a list of over eighty thousand words.
 - With the computer as player, it searches through the list for valid words
 
-The example code ran slow and, even though it was not part of the assignment, I decided to try fixing it. What follows is output that compares the performance of the example code to the modified code that I implemented.
+The example code ran slow and, while it was not part of the assignment, I decided to try fixing it. What follows is output that compares the performance of the example code to the modified code that I implemented.
 ```
 Loading word list from file...
    83667 words loaded.
@@ -26,16 +25,18 @@ ccw1 results: word vigor score: 45 time: 0:00:55.997249
 ccw2 results: word vigor score: 45 time: 0:00:00.062486
 Modified code is 896 times faster
 ```
-I can only laugh at this. Naturally people want to know how I did it.
+I was able to leverage my previous experience to improve the code. My solution focused on reducing the size of the data to be searched and eliminating some unnecessary and time consuming steps, but involved a lot of copying. I was able to get even better results using a different approach that leveraged Python's capabilities.
+
 ```
-Created on Fri Sep 24 09:17:43 2021
-Attempts to make compChooseWord() run faster.
-1. Eliminates words longer than hand size. Hand size = 7 yields 53901 words
-2. Assumes that the best score is produced by the longest words
-3. Recursively searches the longest words first.
-4. Search returns as soon as a list of candidates is found.
-5. Does not search shorter words if longer candidates are found.
-6. Only scores a small list of candidate words
-7. Eliminates an unnecessary step in isWordValid
+hand {'i': 1, 'u': 1, 'q': 1, 't': 1, 'j': 1, 'b': 1, 'g': 1}
+ccw2 results: word qubit score: 80 time: 0:00:00.093693
+ccw3 results: word qubit score: 80 time: 0:00:00.031243
+
+hand {'e': 1, 'i': 1, 'x': 1, 'y': 1, 'l': 1, 'v': 1, 'm': 1}
+ccw2 results: word xylem score: 85 time: 0:00:00.109351
+ccw3 results: word xylem score: 85 time: 0:00:00.015581
+
 ```
-Of course, there's a trade off. The modified code doesn't guarantee that the word it chooses will be the highest possible score. There are cases when a word with fewer letters will produce a higher score. It wouldn't be too difficult to add a step to continue searching smaller words under certain circumstances. But for now, I decided to take the trade off and move on.
+This code uses exhaustive enumeration, so it is guaranteed to produce the best possible result, whereas the previous version was not. However, it does introduce exponential complexity with respect to the size of the hand.
+
+Those experienced in computer science will no doubt consider this an elementary problem, but it's a good example of a real problem that I was able to solve. 
