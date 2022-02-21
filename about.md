@@ -12,7 +12,8 @@ My name is **Christopher Cardea**. I'm a former CPA with some programming experi
 I took programming courses in college but am mostly self-taught. I've worked with C and C++ and more recently with PHP, along with HTML, CSS, and XML. I've studied object-oriented programming and design and relational database design and implementation with SQL. I've made a few contributions to open-source projects on Drupal.
 
 ### Current Sills 
-- Recently completed MIT courses for Python programmiing and Data Science (online)
+- Recently completed MIT courses for Python programming and Data Science (online)
+- Currently auditing IBM Data Engineering Fundamentals
 - Languages: Python, SQL
 - Libraries: Numpy, Pandas, Matplotlib, Jupyter Lab
 - DBMS: SQLite3
