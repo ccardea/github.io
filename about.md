@@ -17,11 +17,15 @@ I took programming courses in college but am mostly self-taught. I've worked wit
 - Languages: Python, SQL
 - Libraries: Numpy, Pandas, Matplotlib, Jupyter Lab
 - DBMS: SQLite3
-- Development Environment:
-    - Ubuntu/Linux
-    - Windows Subsystem for Linux (WSL) on Windows 11
-    - Visual Studio Code
-    - Git/Github
+
+### Development Environment:
+- Ubuntu/Linux
+- Windows Subsystem for Linux (WSL) on Windows 11
+- Visual Studio Code
+- Git/Github
+- Virtual environments using venv
+- Package management: pip
 
 ### Demonstration Projects
 - [Hangman](https://colab.research.google.com/drive/1W2l2p6HtsIvk-obAqS1zUoBK4H1xOovy?usp=sharing)
+- [Using_Slot](https://wiki.python.org/moin/UsingSlots)
