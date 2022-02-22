@@ -28,4 +28,4 @@ I took programming courses in college but am mostly self-taught. I've worked wit
 
 ### Demonstration Projects
 - [Hangman](https://colab.research.google.com/drive/1W2l2p6HtsIvk-obAqS1zUoBK4H1xOovy?usp=sharing)
-- [Using_Slot](https://wiki.python.org/moin/UsingSlots)
+- [UsingSlots](https://wiki.python.org/moin/UsingSlots)
