@@ -9,7 +9,7 @@ Looking to get started in data analytics
 My name is **Christopher Cardea**. I'm a former CPA with some programming experience and interests in relational database management systems and statistics. I believe I can be an asset in a Data Analytics/Engineering environment. I am currently working on a portfolio of projects to demonstrate my skills. 
 
 ### Computer Science Background and Experience
-I took programming courses in college but am mostly self-taught. I've worked with C and C++ and more recently with PHP, along with HTML, CSS, and XML. I've studied object-oriented programming and design and relational database design. In the pst I've created and used Microsoft Access and MySQL databases. I've run a Windows 2000 server and Apache web server, and made a few contributions to open-source projects on Drupal.
+I took programming courses in college but am mostly self-taught. I've worked with C and C++ and more recently with PHP, along with HTML, CSS, and XML. I've studied object-oriented programming and design and relational database design. In the past I've created and used Microsoft Access and MySQL databases. I've run a Windows 2000 server and Apache web server, and made a few contributions to open-source projects on Drupal.
 
 ### Current Sills 
 - Recently completed MIT courses for Python programming and Data Science (online)
