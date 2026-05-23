@@ -1,0 +1,62 @@
+---
+import Head from '../components/Head.astro';
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <Head title={title} description={description} />
+  </head>
+  <body>
+    <Header />
+    <div class="page-shell">
+      <section class="page-message">
+        <slot name="message" />
+      </section>
+      <main class="page-content">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
+
+<style>
+:global(html) {
+  box-sizing: border-box;
+}
+
+:global(*), :global(*::before), :global(*::after) {
+  box-sizing: inherit;
+}
+
+.page-shell {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  min-height: calc(100vh - 4rem);
+}
+
+.page-message {
+  margin-bottom: 1.5rem;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .page-shell {
+    padding: 2rem;
+  }
+}
+</style>
