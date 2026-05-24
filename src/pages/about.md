@@ -1,7 +1,9 @@
 ---
-layout: page
-title: About
+layout: ../layouts/MDPageLayout.astro
+title: "About"
+description: "About C. Cardea and background"
 ---
+
 ## C. Cardea
 Looking to get started in data analytics
 
