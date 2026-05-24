@@ -2,7 +2,7 @@
   "name": "github.io",
   "version": "2.0.0",
   "description": "Static Github User IO site",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

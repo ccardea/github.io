@@ -1,4 +1,9 @@
+# Directories
 node_modules
+archive
+.github/**/*
+.astro/**/*
 
+# Files
 md-syntax.md
 plan.md
