@@ -1,0 +1,20 @@
+---
+import MDPageLayout from '../../layouts/MDPageLayout.astro';
+import { getCollection, render } from 'astro:content';
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(post => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { post } = Astro.props;
+const {title, description} = post.data;
+const desc = description.length > 150 ? description.slice(0,150):description;
+const { Content } = await render(post);
+---
+<MDPageLayout title={title} description={desc}>
+    <Content />
+</MDPageLayout>
