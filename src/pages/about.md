@@ -1,35 +1,27 @@
 ---
 layout: ../layouts/MDPageLayout.astro
-title: "About"
-description: "About C. Cardea and background"
+title: "About C. Cardea"
+description: "Background information about C. Cardea"
 ---
 
-## C. Cardea
-Looking to get started in data analytics
+## About C. Cardea
 
-### A Little Bit About Me
-My name is **Christopher Cardea**. I'm a former CPA with some programming experience and interests in relational database management systems and statistics. I believe I can be an asset in a Data Analytics/Engineering environment. I am currently working on a portfolio of projects to demonstrate my skills. 
+### Introduction and Background
+My name is **Christopher Cardea**. I'm a former CPA, currently retired from the transportation industry. I have tinkered with computer programming at various times during the past forty years. My latest iteration started in 2022, when I got interested in learning Python. I completed a couple of courses from MIT, and was thinking about doing some work in data analytics. I eventually decided that, at this stage of my life, data analytics is not for me. However, I do maintain a couple of hobby web sites.
 
-### Computer Science Background and Experience
-I took programming courses in college but am mostly self-taught. I've worked with C and C++ and more recently with PHP, along with HTML, CSS, and XML. I've studied object-oriented programming and design and relational database design. In the past I've created and used Microsoft Access and MySQL databases. I've run a Windows 2000 server and Apache web server, and made a few contributions to open-source projects on Drupal.
+### Current Interests
+Creating and maintaining my websites has been quite a learning experience. The technology is so much more advanced than it was when I started out, and frankly, the new languages and tools are a joy to work with. Below are some details of things I'm currently working with.
 
-### Current Sills 
-- Recently completed MIT courses for Python programming and Data Science (online)
-- Currently auditing IBM Data Engineering Fundamentals
-- Languages: Python, SQL
-- Libraries: Numpy, Pandas, Matplotlib, Jupyter Lab
-- DBMS: SQLite, PostgreSQL
+#### Javascript, Typescript, and Related Tools
+During 2025, I spent quite a bit of time working with and becoming proficient in Javascript, and more recently with Typescript. Now that I've acquired a better understanding of Javascript and Typescript, I've chosen Astro as my preferred framework. 
 
-### Development Environment:
-- Ubuntu/Linux
-- Windows Subsystem for Linux (WSL) on Windows 11
-- Visual Studio Code
-- Git/Github
-- Virtual environments using venv
-- Package management: pip
+#### Cloudflare Workers
+All of my sites are hosted on the Cloudflare global network. Workers is Cloudflare's fantastic development platform. I currently have one worker running in production and two more in development. I like to do test-driven development because it produces cleaner, better, bug-free code. One of the great things about Cloudflare is its integration with the Vitest testing framework.
 
-### Demonstration Projects
-- [Hangman](https://colab.research.google.com/drive/1W2l2p6HtsIvk-obAqS1zUoBK4H1xOovy?usp=sharing)
-- [Simple Time Tracker](https://ccardea.github.io/stt)
-- [STT Reports](https://colab.research.google.com/drive/1Q1hwEd0YKXMVSqGoksvXiFHHt1b7UmYx?usp=sharing)
-- [UsingSlots](https://wiki.python.org/moin/UsingSlots)
+#### Rust
+I've recently started learning Rust, which is another fantastic, relatively new, fast, safe, and in-demand programming language. Rust is used mostly for systems programming, but can also be used to write Cloudflare workers.
+
+#### Artificial Intelligence
+Why? Because everybody's doing it. Migrating this little Github user site to Astro is my first AI assisted project using Copilot.
+
+
