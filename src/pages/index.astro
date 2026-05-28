@@ -1,16 +1,19 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
+import PostSummary from "../components/PostSummary.astro";
 import {getCollection, type CollectionEntry} from 'astro:content';
 const posts = await getCollection('posts');
 const title = "ccardea github.io";
 const description = "Github User Pages site.";
 ---
 <PageLayout title={title}  description={description} >
+  <div slot="message">
+    <h2>Hello World!</h2>
+    <p>This page lists summaries of some of my projects. The summaries link to individual project pages where you will find information on the current state of the project and plans for the future.</p>
+  </div>  
     
-    <h1>Hello World!</h1>
-    <ul>
+
   {posts.map((post: CollectionEntry<"posts">) => {
-    <li><a href={`/posts/${post.id}`}>{post.data.title}</a></li>
+    <PostSummary entry={post}></PostSummary>
   })}
-</ul>
 </PageLayout>

@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from "astro:content";
+interface Props {
+    entry: CollectionEntry<'posts'>;
+}
+const {entry}= Astro.props;
+const {title, description, pubDate, updated} = entry.data;
+---
+<div>
+    <ul>
+        <li><a href=`/posts/${entry.id}` class="title">{title}</a> </li>
+        <li><strong>Description:</strong> {description} </li>
+        <li><strong>Published:</strong> {pubDate.toDateString()}</li>
+        <li><strong>Last updated:</strong> {updated?.toDateString()}</li>
+    </ul>
+</div>
+<style>
+    ul {
+        list-style-type: none;
+    }
+    .title{
+        color: var(--accent);
+        font-weight: bold;
+    }
+</style>
