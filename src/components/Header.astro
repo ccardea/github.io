@@ -1,15 +1,16 @@
 ---
 import { SITE_TITLE } from "../consts";
+const BASE = import.meta.env.BASE_URL;
 ---
 <header>
   <div id="site-title">
     <h1>
-      <a href="/">{SITE_TITLE}</a>
+      <a href={BASE}>{SITE_TITLE}</a>
     </h1>
   </div>
   <nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
+    <a href={BASE}>Home</a>
+    <a href=`${BASE}/about`>About</a>
   </nav>
 </header>
 

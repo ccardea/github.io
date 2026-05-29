@@ -3,12 +3,13 @@ import type { CollectionEntry } from "astro:content";
 interface Props {
     entry: CollectionEntry<'posts'>;
 }
+const BASE = import.meta.env.BASE_URL;
 const {entry}= Astro.props;
 const {title, description, pubDate, updated} = entry.data;
 ---
 <div>
     <ul>
-        <li><a href=`/posts/${entry.id}` class="title">{title}</a> </li>
+        <li><a href=`${BASE}/posts/${entry.id}` class="title">{title}</a> </li>
         <li>{description} </li>
         <li><span class="pubDate">First Published:</span> {pubDate.toDateString()}</li>
         <li><span class="pubDate">Last updated:</span> {updated?.toDateString()}</li>
