@@ -3,6 +3,7 @@ node_modules
 archive
 .astro/
 .github/instructions/
+dist/
 
 # Files
 md-syntax.md
